@@ -1,0 +1,193 @@
+ /* ============ GLOBAL ============ */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Poppins", sans-serif;
+            line-height: 1.5;
+            background-color: white;
+            color: #222;
+        }
+
+        header.header {
+            background-color: #003a34;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .header .logo img {
+            width: 120px;
+            height: auto;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+        }
+
+        .navbar a.active, .navbar a:hover {
+            color: #d4af37;
+        }
+
+        /* ============ LAYOUT PRINCIPAL ============ */
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin: 20px auto;
+            max-width: 1300px;
+        }
+
+        aside.sidebar, section.content {
+            background: #003a34;
+            color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            flex: 1 1 300px;
+        }
+
+        aside.sidebar img {
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
+            object-fit: cover;
+            display: block;
+            margin: 0 auto 10px;
+        }
+
+        /* Diminuer taille des 2 premières images */
+        main:nth-of-type(1) .sidebar img,
+        main:nth-of-type(2) .sidebar img {
+            width: 130px;
+            height: auto;
+        }
+
+        /* Réduire espaces verticaux */
+        h2, h3, h4, p {
+            margin: 5px 0;
+        }
+
+        /* ============ GRILLE POUR LES SECTIONS À PARTIR DU 3e BLOC ============ */
+        main:nth-of-type(n+3) {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        main:nth-of-type(n+3) .sidebar img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 10px;
+        }
+
+        /* ============ FOOTER ============ */
+        footer {
+            background-color: #003a34;
+            color: #fff;
+            padding: 30px 0 10px 0;
+            margin-top: 40px;
+        }
+
+        .footer-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-column h3 {
+            color: #FFD700;
+        }
+
+        .footer-column ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-column a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .footer-column a:hover {
+            color: #FFD700;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            margin-top: 15px;
+            border-top: 1px solid #444;
+            padding-top: 10px;
+        }
+
+        /* Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        top: 70px;
+        right: -100%;
+        width: 220px;
+        height: calc(100vh - 70px);
+        background-color: #003a34;
+        padding-top: 30px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        box-shadow: -3px 0 10px rgba(0,0,0,0.2);
+        z-index: 999;
+    }
+
+    .menu.active {
+        right: 0;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Animation du hamburger */
+.hamburger.active div:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+

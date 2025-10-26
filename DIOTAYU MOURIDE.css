@@ -1,0 +1,384 @@
+/* ---------- TITRES GÉNÉRAUX ---------- */
+h1 {
+  text-align: center;
+  color: #f0c000;
+}
+
+h2 {
+  text-align: center;
+  color: #f0c000;
+}
+
+/* ---------- STYLE PRINCIPAL ---------- */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f0fff5;
+  color: #333;
+}
+
+/* =======================
+   HEADER & NAVBAR
+======================= */
+header {
+  background: #003a34;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  color: #fff;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.navbar .menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a.active {
+  color: #ffe600;
+}
+
+/* ---------- Responsive navbar ---------- */
+@media screen and (max-width: 900px) {
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    top: 70px;
+    right: -100%;
+    width: 220px;
+    height: calc(100vh - 70px);
+    background-color: #003a34;
+    padding-top: 30px;
+    gap: 20px;
+    transition: right 0.3s ease;
+    box-shadow: -3px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+  }
+
+  .menu.active {
+    right: 0;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+
+/* ---------- Hamburger ---------- */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  transition: all 0.3s ease;
+}
+
+/* Animation du hamburger */
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* =======================
+   SECTION EXPLICATIONS
+======================= */
+#explanations {
+  color: #f1f1f1;
+  padding: 80px 0;
+  text-align: center;
+}
+
+#explanations .section-title h2 {
+  font-size: 2.2em;
+  color: #FFD700;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#explanations .section-title p {
+  font-size: 1.1em;
+  color: #ddd;
+  margin-bottom: 50px;
+}
+
+/* --- Onglets --- */
+.explanation-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+.tab-btn {
+  background: transparent;
+  color: #003a34;
+  border: 2px solid #FFD700;
+  padding: 10px 20px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+  background: #003a34;
+  color: #FFD700;
+}
+
+.tab-btn.active {
+  background: #FFD700;
+  color: #003a34;
+}
+
+/* --- Contenu des onglets --- */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- Grille des cartes conceptuelles --- */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background-color: #003a34;
+  border: 1px solid rgba(255, 215, 0, 0.3);
+  border-radius: 15px;
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 6px 20px rgba(255, 215, 0, 0.2);
+}
+
+.feature-icon {
+  font-size: 2.5em;
+  color: #FFD700;
+  margin-bottom: 10px;
+}
+
+.feature-card h3 {
+  color: #FFFFFF;
+  font-size: 1.3em;
+  margin-bottom: 10px;
+}
+
+.feature-card p {
+  color: #ddd;
+  font-size: 1em;
+  line-height: 1.5;
+}
+
+/* =======================
+   SECTION LECTURES ET ÉCRITS
+======================= */
+.viewer-section {
+  padding: 50px 20px;
+  background: #f9f9f9;
+}
+
+.viewer-section h2 {
+  text-align: center;
+  color: #003a34;
+  margin-bottom: 10px;
+}
+
+.viewer-section p {
+  text-align: center;
+  color: #444;
+  margin-bottom: 40px;
+}
+
+/* === Grille responsive === */
+.viewer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  justify-items: center;
+}
+
+/* === Carte individuelle === */
+.viewer-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 300px;
+}
+
+.viewer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.viewer-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.viewer-card h3 {
+  color: #003a34;
+  margin: 15px 0;
+}
+
+.viewer-card .btn {
+  margin: 10px 0 20px;
+}
+
+.viewer-card a {
+  text-decoration: none;
+  color: white;
+}
+
+.btn.btn-primary {
+  background-color: #003a34;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn.btn-primary:hover {
+  background-color: #006b5b;
+}
+
+/* Animation d’apparition */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === Responsive Grid === */
+@media (min-width: 768px) {
+  .viewer-container {
+    grid-template-columns: repeat(3, 1fr); /* Tablette : 3 cartes */
+  }
+}
+
+@media (min-width: 1024px) {
+  .viewer-container {
+    grid-template-columns: repeat(4, 1fr); /* Ordinateur : 4 cartes */
+  }
+}
+
+@media (min-width: 1400px) {
+  .viewer-container {
+    grid-template-columns: repeat(5, 1fr); /* Grand écran : 5 cartes */
+  }
+}
+
+/* =======================
+   FOOTER
+======================= */
+footer {
+  background: #003a34;
+  color: white;
+  margin-top: 120px;
+  font-size: 0.9rem;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1500px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.footer-column h3 {
+  margin-bottom: 15px;
+  font-size: 1.2em;
+  color: #f0c000;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+}
+
+.footer-column ul li a {
+  color: #eee;
+  text-decoration: none;
+}
+
+.footer-column ul li a:hover {
+  color: #f0c000;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 14px;
+  margin-right: 12px;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #f8c22e;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 0;
+}

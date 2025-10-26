@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Encodage et compatibilité -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> <!-- Compatibilité IE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <!-- Responsive -->
+
+    <!-- SEO et Métadonnées -->
+    <meta name="description" content="Site officiel de NourDigital - Portfolio et application web" />
+    <meta name="author" content="NourDigital" />
+    <meta name="keywords" content="NourDigital site web, portfolio, application, développement web" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Couleur de la barre de navigateur sur mobile -->
+    <meta name="theme-color" content="#FFD700">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"> <!-- iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes"> <!-- Mode web app iOS -->
+
+    <!-- Icônes pour tous les appareils -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" sizes="192x192" href="android-chrome-192x192.png"> <!-- Android -->
+    <link rel="icon" sizes="512x512" href="android-chrome-512x512.png"> <!-- Android haute résolution -->
+
+    <title> Boutique</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="BOUTIQUE MBECTER.css">
+</head>
+
+<header class="header">
+    <div class="logo">
+        <img src="images/tal.png" alt="Logo CHIFAHU HALBI" width="150px" height="100px">
+    </div>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="ACTUALITE MOURIDE.HTML">Actualité</a></li>
+            <li><a href="AL MOURIDIYA.HTML">Al Mouridiya</a></li>
+            <li><a href="DIOTAYU MOURIDE.HTML">Diotayu Mouride</a></li>
+            <li><a href="KADU.HTML">Kadu</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="BOUTIQUE MBECTER.HTML" class="active">Boutique</a></li>
+        </ul>
+    </nav>
+
+    <!-- Bouton hamburger -->
+    <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+</header>
+
+
+    <!-- PRODUITS -->
+    <section class="products">
+        <h1>Boutique MBECTER 🛍️</h1>
+        <div class="product-grid">
+              <!-- Exemple de produit -->
+      <div class="product">
+            <img src="images/touba.avif" alt="Café Touba">
+            <h3>Café Touba</h3>
+            <p>1.500 F CFA</p>
+            <button onclick="addToCart('Café Touba', 1500)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/kha2.jpeg" alt="Café Touba">
+            <h3>xassida mafatikhal bichri</h3>
+            <p>2000 F CFA</p>
+            <button onclick="addToCart('xassida', 2000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/kha3.jpeg" alt="Café Touba">
+            <h3>xassida wakana hakhan</h3>
+            <p>2000 F CFA</p>
+            <button onclick="addToCart('xassida', 2000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/kha1.jpeg" alt="Café Touba">
+            <h3>xassida sindidi</h3>
+            <p>2000 F CFA</p>
+            <button onclick="addToCart('xassida', 2000)">Ajouter au panier</button>
+        </div>
+
+        <div class="product">
+            <img src="images/BaayLaha1.png" alt="T-shirt Mouride">
+            <h3>habillement Mouride</h3>
+            <p>15.000 F CFA</p>
+            <button onclick="addToCart('habillement Mouride', 15000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/BaayLaha.jpg" alt="T-shirt Mouride">
+            <h3>habillement Mouride</h3>
+            <p>15.000 F CFA</p>
+            <button onclick="addToCart('habillement Mouride', 15000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/par1.jpeg" alt="Parfum Religieux">
+            <h3>Parfum Religieux</h3>
+            <p>3.000 F CFA</p>
+            <button onclick="addToCart('Parfum Religieux', 3000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/par.jpeg" alt="Parfum Religieux">
+            <h3>Parfum Religieux</h3>
+            <p>3.000 F CFA</p>
+            <button onclick="addToCart('Parfum Religieux', 3000)">Ajouter au panier</button>
+        </div>
+
+        <div class="product">
+            <img src="images/bois.jpeg" alt="Chapelet Bois">
+            <h3>Chapelet en Bois</h3>
+            <p>5.000 F CFA</p>
+            <button onclick="addToCart('Chapelet Bois', 5000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/cor3.jpeg" alt="Chapelet Bois">
+            <h3>Coran</h3>
+            <p>5.000 F CFA</p>
+            <button onclick="addToCart('coran', 5000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/cor.jpeg" alt="Chapelet Bois">
+            <h3>Coffret</h3>
+            <p>25.000 F CFA</p>
+            <button onclick="addToCart('Coffret', 25000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/cor2.jpeg" alt="Chapelet Bois">
+            <h3>Coffret</h3>
+            <p>25.000 F CFA</p>
+            <button onclick="addToCart('Coffret', 25000)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/cor1.jpeg" alt="Chapelet Bois">
+            <h3>Fégu</h3>
+            <p>4.000 F CFA</p>
+            <button onclick="addToCart('plateau', 4000)">Ajouter au panier</button>
+        </div>
+       
+        <div class="product">
+            <img src="images/chap1.jpg" alt="Jilbab Femme">
+            <h3>chapelet Femme</h3>
+            <p>2.500 F CFA</p>
+            <button onclick="addToCart('Jilbab Femme', 2500)">Ajouter au panier</button>
+        </div>
+
+        <div class="product">
+            <img src="images/tapi.jpg" alt="Tapis Prière">
+            <h3>Tapis de Prière</h3>
+            <p>3.500 F CFA</p>
+            <button onclick="addToCart('Tapis de Prière', 3500)">Ajouter au panier</button>
+        </div>
+        <div class="product">
+            <img src="images/tapi1.jpeg" alt="Tapis Prière">
+            <h3>Tapis de Prière</h3>
+            <p>7000 F CFA</p>
+            <button onclick="addToCart('Tapis de Prière', 7000)">Ajouter au panier</button>
+        </div>
+    </section>
+
+
+    <!-- PANIER -->
+    <section class="cart" id="cart">
+        <h2>🛒 Panier</h2>
+        <ul id="cart-items"></ul>
+        <p><strong>Total :</strong> <span id="total">0</span> F CFA</p>
+
+        <div class="cart-buttons">
+            <button class="pay-btn" onclick="checkout()">
+                <i class="fa-solid fa-money-bill"></i> Payer avec
+                <a href="https://sn.mmapp.wave.com/web/referrals/c/8ON4G " target="_blank" style="color:white;">Wave</a>
+            </button>
+            <button class="whatsapp-btn" onclick="orderWhatsApp()">
+                <i class="fa-brands fa-whatsapp"></i> Commander sur WhatsApp
+            </button>
+        </div>
+    </section>
+
+    <!-- REÇU -->
+    <div class="receipt" id="receipt" style="display: none;">
+        <h2>✅ Paiement simulé effectué !</h2>
+        <p>🕌 Merci pour votre commande.<br><strong>“Dieu aime ceux qui font le bien” – Coran 2:195</strong></p>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column">
+                <h3>Contact</h3>
+                <ul>
+                    <li> <a href=" mailto:fatimakane796@gmail.com" target="_blank"
+                            style="color: white;">NourDigital@gmail.com</a>
+                    </li>
+                    <li>Téléphone : +221 77 000 00 00</li>
+                    <li>Adresse : Thies, Sénégal</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Liens utiles</h3>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="ACTUALITE MOURIDE.HTML">Actualité</a></li>
+                    <li><a href="AL MOURIDIYA.HTML">Al Mouridiya</a></li>
+                    <li><a href="BOUTIQUE MBECTER.HTML">Boutique</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Suivez-nous</h3>
+                <ul class="social-icons">
+                    <li><a href="https://www.facebook.com/profile.php?id=61575202390301"><i class="fab fa-facebook"></i>
+                            Facebook</a></li>
+                    <li><a href="https://www.youtube.com/@MajmahunNurayniTV"><i class="fab fa-youtube"></i> YouTube</a>
+                    </li>
+                    <li><a href="https://www.linkedin.com/feed/" target="_blank"><i
+                                class="fab fa-linkedin"></i>linkedin</a></li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 NourDigital – Tous droits réservés</p>
+        </div>
+    </footer>
+
+    <!-- SCRIPT PANIER -->
+    <script>
+
+        
+        let cart = [];
+
+        function addToCart(product, price) {
+            cart.push({ product, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            const cartItems = document.getElementById('cart-items');
+            const totalElem = document.getElementById('total');
+            cartItems.innerHTML = '';
+            let total = 0;
+            cart.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.product} - ${item.price.toLocaleString()} F CFA`;
+                cartItems.appendChild(li);
+                total += item.price;
+            });
+            totalElem.textContent = total.toLocaleString();
+        }
+
+        function checkout() {
+            if (cart.length === 0) {
+                alert("Votre panier est vide !");
+                return;
+            }
+            document.getElementById('receipt').style.display = 'block';
+            window.scrollTo(0, document.body.scrollHeight);
+        }
+
+        function orderWhatsApp() {
+            if (cart.length === 0) {
+                alert("Votre panier est vide !");
+                return;
+            }
+            const total = cart.reduce((sum, item) => sum + item.price, 0);
+            const message = encodeURIComponent(
+                "Salam, je souhaite commander les articles suivants :\n" +
+                cart.map(i => `• ${i.product} - ${i.price} F`).join("\n") +
+                `\n\nTotal : ${total} F CFA`
+            );
+            window.open(`https://wa.me/221755274665?text=${message}`, "_blank");
+        }
+        // responsive
+        
+const hamburger = document.getElementById('hamburger');
+const menu = document.querySelector('.menu');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('active');
+});
+
+
+    </script>
+
+
+
+
+</body>
+
+</html>
